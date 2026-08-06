@@ -1,0 +1,19 @@
+## 10. Four Sum Count
+
+```python id="uh4x7z"
+A = [1, 2]
+B = [-2, -1]
+C = [-1, 2]
+D = [0, 2]
+
+count = 0
+
+for a in A:
+    for b in B:
+        for c in C:
+            for d in D:
+                if a + b + c + d == 0:
+                    count += 1
+
+print("Number of Tuples:", count)
+```
