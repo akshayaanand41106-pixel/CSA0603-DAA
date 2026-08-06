@@ -1,0 +1,13 @@
+## 15. Large Group Positions
+
+```python
+s = input("Enter string: ")
+
+start = 0
+
+for i in range(len(s)):
+    if i == len(s)-1 or s[i] != s[i+1]:
+        if i - start + 1 >= 3:
+            print([start, i])
+        start = i + 1
+```
