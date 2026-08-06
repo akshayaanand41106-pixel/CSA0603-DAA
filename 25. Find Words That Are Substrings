@@ -1,0 +1,15 @@
+## 8. Find Words That Are Substrings of Another Word
+
+```python id="7m7g0n"
+words = input("Enter words: ").split()
+
+result = []
+
+for i in range(len(words)):
+    for j in range(len(words)):
+        if i != j and words[i] in words[j]:
+            result.append(words[i])
+            break
+
+print(result)
+```
