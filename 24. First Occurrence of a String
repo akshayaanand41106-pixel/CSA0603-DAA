@@ -1,0 +1,10 @@
+## 7. Find First Occurrence of a String
+
+```python id="7n4qle"
+haystack = input("Enter main string: ")
+needle = input("Enter substring: ")
+
+index = haystack.find(needle)
+
+print(index)
+```
