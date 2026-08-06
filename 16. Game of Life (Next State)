@@ -1,0 +1,36 @@
+## 16. Game of Life (Next State)
+
+```python
+board = [
+    [0,1,0],
+    [0,0,1],
+    [1,1,1],
+    [0,0,0]
+]
+
+rows = len(board)
+cols = len(board[0])
+
+new = [[0]*cols for _ in range(rows)]
+
+for i in range(rows):
+    for j in range(cols):
+        live = 0
+        for x in [-1,0,1]:
+            for y in [-1,0,1]:
+                if x == 0 and y == 0:
+                    continue
+                r = i + x
+                c = j + y
+                if 0 <= r < rows and 0 <= c < cols:
+                    live += board[r][c]
+
+        if board[i][j] == 1 and live in [2,3]:
+            new[i][j] = 1
+        elif board[i][j] == 0 and live == 3:
+            new[i][j] = 1
+
+print("Next State:")
+for row in new:
+    print(row)
+```
