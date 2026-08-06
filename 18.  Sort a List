@@ -1,0 +1,9 @@
+## 1. Sort a List (Handles Empty, Single, Identical, and Negative Elements)
+
+```python
+nums = list(map(int, input("Enter numbers: ").split()))
+
+nums.sort()
+
+print("Sorted List:", nums)
+```
