@@ -1,0 +1,19 @@
+## 17. Champagne Tower
+
+```python
+poured = int(input("Poured Cups: "))
+row = int(input("Query Row: "))
+glass = int(input("Query Glass: "))
+
+dp = [[0]*101 for _ in range(101)]
+dp[0][0] = poured
+
+for i in range(row + 1):
+    for j in range(i + 1):
+        extra = (dp[i][j] - 1) / 2
+        if extra > 0:
+            dp[i+1][j] += extra
+            dp[i+1][j+1] += extra
+
+print("Glass Fill =", min(1, dp[row][glass]))
+```
