@@ -1,0 +1,29 @@
+## 9. Binary Search
+
+```python
+nums = list(map(int, input("Enter numbers: ").split()))
+key = int(input("Enter key: "))
+
+nums.sort()
+
+low = 0
+high = len(nums) - 1
+found = False
+
+while low <= high:
+    mid = (low + high) // 2
+
+    if nums[mid] == key:
+        print("Element found at position", mid + 1)
+        found = True
+        break
+    elif nums[mid] < key:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+if not found:
+    print("Element not found")
+
+print("Time Complexity: O(log n)")
+```
