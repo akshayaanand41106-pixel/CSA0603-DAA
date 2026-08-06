@@ -1,0 +1,10 @@
+## 11. Find the k-th Smallest Element
+
+```python
+arr = list(map(int, input("Enter numbers: ").split()))
+k = int(input("Enter k: "))
+
+arr.sort()
+
+print("K-th Smallest Element =", arr[k - 1])
+```
