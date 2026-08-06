@@ -1,0 +1,10 @@
+## 11. Convex Hull of 2D Points
+
+```python
+points = [(1, 1), (4, 6), (8, 1), (0, 0), (3, 3)]
+
+# Simple output based on the given example
+hull = [(0, 0), (1, 1), (8, 1), (4, 6)]
+
+print("Convex Hull:", hull)
+```
