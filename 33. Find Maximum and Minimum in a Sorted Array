@@ -1,0 +1,8 @@
+## 2. Find Maximum and Minimum in a Sorted Array
+
+```python
+nums = list(map(int, input("Enter sorted numbers: ").split()))
+
+print("Minimum =", nums[0])
+print("Maximum =", nums[-1])
+```
