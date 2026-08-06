@@ -1,0 +1,29 @@
+## 13. Assignment Problem (Brute Force)
+
+```python
+from itertools import permutations
+
+cost = [
+    [3,10,7],
+    [8,5,12],
+    [4,6,9]
+]
+
+n = len(cost)
+
+min_cost = float("inf")
+best = ()
+
+for p in permutations(range(n)):
+    total = 0
+
+    for i in range(n):
+        total += cost[i][p[i]]
+
+    if total < min_cost:
+        min_cost = total
+        best = p
+
+print("Assignment:", best)
+print("Minimum Cost:", min_cost)
+```
