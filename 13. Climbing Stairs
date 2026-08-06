@@ -1,0 +1,13 @@
+## 13. Climbing Stairs
+
+```python
+n = int(input("Enter number of steps: "))
+
+a = 1
+b = 1
+
+for i in range(n):
+    a, b = b, a + b
+
+print("Ways =", a)
+```
