@@ -1,0 +1,12 @@
+## 6. Sort the List and Find the Maximum Element
+
+```python
+nums = list(map(int, input("Enter numbers: ").split()))
+
+if len(nums) == 0:
+    print("List is empty")
+else:
+    nums.sort()
+    print("Sorted List:", nums)
+    print("Maximum Element:", nums[-1])
+```
