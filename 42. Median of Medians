@@ -1,0 +1,10 @@
+## 12. Median of Medians (Simple Version)
+
+```python
+arr = list(map(int, input("Enter numbers: ").split()))
+k = int(input("Enter k: "))
+
+arr.sort()
+
+print("Answer =", arr[k - 1])
+```
