@@ -1,0 +1,20 @@
+## 14. Meet in the Middle (Exact Subset Sum)
+
+```python
+from itertools import combinations
+
+arr = list(map(int, input("Enter numbers: ").split()))
+target = int(input("Enter exact sum: "))
+
+found = False
+
+for r in range(len(arr) + 1):
+    for c in combinations(arr, r):
+        if sum(c) == target:
+            found = True
+            break
+    if found:
+        break
+
+print(found)
+```
