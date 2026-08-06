@@ -1,0 +1,30 @@
+## 14. 0-1 Knapsack (Brute Force)
+
+```python
+from itertools import combinations
+
+weights = [2, 3, 1]
+values = [4, 5, 3]
+capacity = 4
+
+best_value = 0
+best_items = []
+
+n = len(weights)
+
+for r in range(n + 1):
+    for c in combinations(range(n), r):
+        w = 0
+        v = 0
+
+        for i in c:
+            w += weights[i]
+            v += values[i]
+
+        if w <= capacity and v > best_value:
+            best_value = v
+            best_items = list(c)
+
+print("Selected Items:", best_items)
+print("Total Value:", best_value)
+```
